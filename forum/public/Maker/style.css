@@ -1,6 +1,6 @@
-.list_1{
+.list{
     position: relative;
-    width: 40%;
+    width: 20%;
 }
 .image{
     display: block;
@@ -19,7 +19,7 @@
     transition: .5s ease;
     background-color:#008CBA;
 }
-.list_1:hover .active_1 {
+.list:hover .active_1 {
     opacity: 1;/*不透明等级*/
 }
 .text_head{
@@ -29,6 +29,7 @@
     top: 10%;
 }
 .text {
+    text-indent: 20px;
     color: white;
     font-size: 20px;
     position: absolute;
@@ -38,5 +39,28 @@
     -ms-transform: translate(-50%, -50%);
 }
 .main{
-    
+    display: flex;
+    justify-content: center;
+    width: 70%;
+}
+/****************************************************************/
+/* 创建并排的三个非等列 */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 20px;
+  }
+  
+  /* 清除列之后的浮动 */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+  
+  /* 响应式布局 - 创建堆叠而非并排的三列 */
+@media screen and (max-width:1000px) {
+    .column {
+      width: 120%;
+    }
 }

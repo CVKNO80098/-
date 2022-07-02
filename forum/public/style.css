@@ -64,6 +64,9 @@ input,label{
   width: 100%;
   background-color: #a7a7a7;
   box-sizing: border-box;
+  position: -webkit-sticky;
+  position: sticky;
+  top:0;
 }
 a.top-content{
   position: sticky;
@@ -101,7 +104,18 @@ li {
   width: 90%;
   padding: 20px;
   margin: 20px auto;
-  background-color: rgb(224, 224, 224);
+  background-color: rgb(255, 255, 255);
+  border-radius: 25px;
+  border: 2px solid #218cad;
+}
+.post-container:hover{
+  animation-name: cards;
+  animation-duration: .3s;
+  animation-fill-mode: both;
+}
+@keyframes cards{
+  0% {box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);}
+  100%{box-shadow: 0 4px 8px 0 rgba(47, 47, 47, 0.2), 0 6px 20px 0 rgba(47, 47, 47, 0.2);}
 }
 .post-user{
   text-align: right;
@@ -133,9 +147,10 @@ li {
   left: 50%;
   top: 50%;
   margin-left: -100px;
-  background-color: rgb(209, 209, 209);
+  background-color: rgb(255, 255, 255);
   z-index: 10;
   display: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .regView {
   display: none;
